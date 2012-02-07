@@ -14,7 +14,7 @@ int main(int argc, char** argv)
     Foo(num,num2);
     PrintBinary(num);		// Друк (2 код) аргумента1
     PrintBinary(num2);		// Друк (2 код) аргумента2
-	return 0;
+    return 0;
 }
 void Foo(long a, long b)
 {
