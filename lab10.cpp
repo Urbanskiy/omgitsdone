@@ -5,7 +5,7 @@ int main(int argc, char** argv)
 {
     unsigned long num;
 
-    puts("Enter the number:");
+    puts("Enter the number:");  // for example 259 -> 3
     scanf("%lu",&num);
 
     printf("%lu",Foo(num));     //Виклик ф-ції
@@ -25,7 +25,7 @@ unsigned long Foo(unsigned long x)
 
     temp ^= temp >> 1;  //Залишаєм тільки старший одиничний біт
 
-    return x & ~temp;
+    return x ^ temp;
 }
 void PrintBinary(unsigned long x)
 {
