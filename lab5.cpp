@@ -12,5 +12,5 @@ int main(int argc, char** argv)
 }
 long Foo(long arg)
 {
-    return arg^(arg-1) & arg;
+    return arg&~(arg>>31);
 }
