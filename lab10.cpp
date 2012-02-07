@@ -8,10 +8,10 @@ int main(int argc, char** argv)
     puts("Enter the number:");
     scanf("%lu",&num);
 
-    printf("%lu",Foo(num));     // ¬ËÍÎËÍ Ù-ˆ≥ø Foo
-    PrintBinary(num);
-    PrintBinary(Foo(num));
-	return 0;
+    printf("%lu",Foo(num));     //–í–∏–∫–ª–∏–∫ —Ñ-—Ü—ñ—ó
+    PrintBinary(num);           // –î—Ä—É–∫ (2 –∫–æ–¥) –∞—Ä–≥—É–º–µ–Ω—Ç–∞
+    PrintBinary(Foo(num));      // –î—Ä—É–∫ (2 –∫–æ–¥) —Ñ—É–Ω–∫—Ü—ñ—ó
+    return 0;
 }
 unsigned long Foo(unsigned long x)
 {
@@ -19,11 +19,11 @@ unsigned long Foo(unsigned long x)
 
     temp |= temp >> 1;  //********************************************
     temp |= temp >> 2;  //
-    temp |= temp >> 4;  // ¬Ò≥ ·≥ÚË Ô‡‚≥¯Â ÒÚ‡¯Ó„Ó "1" Á‡ÔÓ‚Ì˛∫Ï "1"
+    temp |= temp >> 4;  // –í—Å—ñ –±—ñ—Ç–∏ –ø—Ä–∞–≤—ñ—à–µ —Å—Ç–∞—Ä—à–æ–≥–æ "1" –∑–∞–ø–æ–≤–Ω—é—î–º "1"
     temp |= temp >> 8;  //
     temp |= temp >> 16; //********************************************
 
-    temp ^= temp >> 1;  // «‡ÎË¯‡∫Ï Ú≥Î¸ÍË ÒÚ‡¯ËÈ Ó‰ËÌË˜ÌËÈ ·≥Ú
+    temp ^= temp >> 1;  //–ó–∞–ª–∏—à–∞—î–º —Ç—ñ–ª—å–∫–∏ —Å—Ç–∞—Ä—à–∏–π –æ–¥–∏–Ω–∏—á–Ω–∏–π –±—ñ—Ç
 
     return x & ~temp;
 }
