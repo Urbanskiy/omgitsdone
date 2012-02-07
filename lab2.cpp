@@ -12,15 +12,15 @@ int main(int argc, char** argv)
     scanf("%lu",&num2);
 
     Foo(num,num2);
-    PrintBinary(num);
-    PrintBinary(num2);
-	return 0;
+    PrintBinary(num);		// Друк (2 код) аргумента1
+    PrintBinary(num2);		// Друк (2 код) аргумента2
+    return 0;
 }
 void Foo(long a, long b)
 {
     long sign;
     sign = ((a - b)>>31) & 1;
-    printf("%ld is biger then %ld \n", (sign^1) * a + sign * b, sign * a + (sign^1) * b);
+    printf("%ld is biger then %ld \n", (sign^1) * a + sign * b, sign * a + (sign^1) * b); // Порівняння двох чисел
 }
 void PrintBinary(long x)
 {

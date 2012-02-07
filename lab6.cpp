@@ -9,10 +9,10 @@ int main(int argc, char** argv)
     puts("Enter the number:");
     scanf("%lu",&num);
 
-    printf("%lu",Foo(num));     // ������ �-��� Foo
-    PrintBinary(num);
-    PrintBinary(Foo(num));
-	return 0;
+    printf("%lu",Foo(num));     // Виклик функції
+    PrintBinary(num);		// Друк (2 код) аргумента
+    PrintBinary(Foo(num));	// Друк (2 код) результату
+    return 0;
 }
 long Foo(long x)
 {

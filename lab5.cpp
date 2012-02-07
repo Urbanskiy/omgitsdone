@@ -11,13 +11,13 @@ int main(int argc, char** argv)
     scanf("%ld",&num);
 
     printf("%ld",Foo(num));     // Виклик ф-ції Foo
-    PrintBinary(num);
-    PrintBinary(Foo(num));
+    PrintBinary(num);		// Друк (2 код) аргумента
+    PrintBinary(Foo(num));	// Друк (2 код) результату
 	return 0;
 }
 long Foo(long arg)
 {
-    return arg&~(arg>>31);
+    return arg&~(arg>>31); 	// Повертаєм "0" якщо від’ємний аргумент, "1" якщо навпаки
 }
 void PrintBinary(long x)
 {

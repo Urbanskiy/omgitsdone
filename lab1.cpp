@@ -8,16 +8,16 @@ int main(int argc, char** argv)
     puts("Enter the number:");
     scanf("%lu",&num);
 
-    printf("%lu",Foo(num));     // ������ �-��� Foo
-    PrintBinary(num);
-    PrintBinary(Foo(num));
+    printf("%lu",Foo(num));     // Виклик ф-ції
+    PrintBinary(num);           // Друк у двійковому коді аргумента
+    PrintBinary(Foo(num));      // Друк у двійковому коді результату
 	return 0;
 }
 unsigned long Foo(unsigned long x)
 {
-    return x + ( (2 >>  (x & 1) ) );
+    return x + ( (2 >>  (x & 1) ) );    // повертає наступне парне число за заданим
 }
-void PrintBinary(unsigned long x)
+void PrintBinary(unsigned long x)  
 {
     printf("\n");
     for (int i = 31; i >= 0; i--){
