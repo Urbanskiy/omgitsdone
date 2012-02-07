@@ -13,7 +13,7 @@ int main(int argc, char** argv)
     printf("%lu",Foo(num));     // Виклик функції
     PrintBinary(num);		// Друк (2 код) аргумента
     PrintBinary(Foo(num));	// Друк (2 код) результату
-	return 0;
+    return 0;
 }
 long Foo(long arg)
 {
