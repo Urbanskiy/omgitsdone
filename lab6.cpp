@@ -10,14 +10,14 @@ int main(int argc, char** argv)
     puts("Enter the number:");
     scanf("%lu",&num);
 
-    printf("%lu",Foo(num));     // ������ �-��� Foo
-    PrintBinary(num);
-    PrintBinary(Foo(num));
+    printf("%lu",Foo(num));     // Виклик функції
+    PrintBinary(num);		// Друк (2 код) аргумента
+    PrintBinary(Foo(num));	// Друк (2 код) результату
 	return 0;
 }
 long Foo(long arg)
 {
-    return arg^(arg-1) & arg;
+    return arg^(arg-1) & arg;  // встановлюєм в 1 єдиний біт - у позиції наймолодшого встановленого в 1 заданого
 }
 void PrintBinary(long x)
 {
