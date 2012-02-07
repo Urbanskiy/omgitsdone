@@ -5,7 +5,7 @@ int main(int argc, char** argv)
     unsigned long int num;
 
     puts("Enter the number:");
-    scanf("%lu",&num);
+    scanf("%ld",&num);
 
     printf("%ld",Foo(num));     // Виклик ф-ції Foo
 	return 0;
