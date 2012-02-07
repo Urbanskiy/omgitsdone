@@ -16,14 +16,15 @@ int main(int argc, char** argv)
 }
 long Foo(long x)
 {
+    long temp = (long)x;
+    x = ~x;
     x |= x << 1;
     x |= x << 2;
     x |= x << 4;
     x |= x << 8;
     x |= x << 16;
     x ^= x << 1;
-    return x;   // число, у якому встановлений в 1 лише один біт -
-                //у позиції наймолодшого встановленого в 1 біта заданого
+    return x | temp;
 }
 void PrintBinary(unsigned long x)
 {
